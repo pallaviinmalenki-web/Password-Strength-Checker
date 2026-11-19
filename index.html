@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Security Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="icon">🔐</div>
+
+        <h1>Password Security Analyzer</h1>
+
+        <p class="subtitle">
+            Protect your digital identity with stronger passwords.
+        </p>
+
+        <label for="password">Enter Your Password</label>
+
+        <div class="password-box">
+            <input type="password" id="password"
+                placeholder="Enter your password"
+                oninput="checkPassword()">
+
+            <button type="button" id="toggleBtn"
+                onclick="togglePassword()">Show</button>
+        </div>
+
+        <div class="strength-info">
+            <span>Password Strength</span>
+            <span id="strengthText">Not Checked</span>
+        </div>
+
+        <div class="progress">
+            <div id="strengthBar"></div>
+        </div>
+
+        <h3>Security Requirements</h3>
+
+        <ul class="requirements">
+            <li id="length">✗ At least 8 characters</li>
+            <li id="uppercase">✗ One uppercase letter</li>
+            <li id="lowercase">✗ One lowercase letter</li>
+            <li id="number">✗ One number</li>
+            <li id="special">✗ One special character</li>
+        </ul>
+
+        <div id="suggestions"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
